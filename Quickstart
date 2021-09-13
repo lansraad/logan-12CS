@@ -1,0 +1,25 @@
+/* 2021-09-13T22:02:00 */
+
+import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+public class Quickstart {
+    public static void main(String[] args) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String user_input = scan.nextLine();
+
+        System.out.printf("\nYou're number is %d\n", Integer.parseInt(user_input));
+        System.out.printf("Local time is %s\n", formatter.format(LocalTime.now()));
+
+
+        // for (int i = 0; i < Integer.parseInt(user_input); i++) {
+        //     System.out.println(i);
+        // }
+
+        scan.close();
+    }
+}
