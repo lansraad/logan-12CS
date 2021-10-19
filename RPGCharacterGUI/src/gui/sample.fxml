@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <left>
+      <Pane maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #1C1C1C;" BorderPane.alignment="CENTER">
+         <children>
+          <Button fx:id="randomize_team_btn" accessibleText="Generates a random team" layoutX="33.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#onRandomizeTeam" prefHeight="25.0" prefWidth="143.0" text="Randomize Team" />
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" text="Character Generator" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="32.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" top="10.0" />
+               </padding>
+            </Label>
+            <ScrollPane hbarPolicy="NEVER" layoutX="348.0" layoutY="31.0" prefHeight="443.0" prefWidth="635.0" style="-fx-background-color: #1C1C1C;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="slot_table" alignment="CENTER" hgap="5.0" prefWidth="0.0" vgap="5.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="135.0" minHeight="135.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="135.0" minHeight="135.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="135.0" minHeight="135.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="135.0" minHeight="135.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="slot_1" mnemonicParsing="false" onAction="#on_slot_1_selected" prefHeight="135.0" prefWidth="200.0">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <top>
+                                          <Label fx:id="n1" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c1" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h1" text="100" textFill="WHITE" />
+                                                <Label fx:id="a1" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa1" text="20" textFill="WHITE" />
+                                                <Label fx:id="s1" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <right>
+                                          <ImageView fx:id="i1" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/barbarian.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_2" mnemonicParsing="false" onAction="#on_slot_2_selected" prefHeight="135.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c2" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h2" text="100" textFill="WHITE" />
+                                                <Label fx:id="a2" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa2" text="20" textFill="WHITE" />
+                                                <Label fx:id="s2" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n2" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i2" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/dragon.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_4" mnemonicParsing="false" onAction="#on_slot_4_selected" prefHeight="135.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c4" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h4" text="100" textFill="WHITE" />
+                                                <Label fx:id="a4" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa4" text="20" textFill="WHITE" />
+                                                <Label fx:id="s4" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n4" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i4" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/knight.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_5" mnemonicParsing="false" onAction="#on_slot_5_selected" prefHeight="135.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c5" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h5" text="100" textFill="WHITE" />
+                                                <Label fx:id="a5" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa5" text="20" textFill="WHITE" />
+                                                <Label fx:id="s5" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n5" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i5" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/wizard.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_7" mnemonicParsing="false" onAction="#on_slot_7_selected" prefHeight="135.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c7" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h7" text="100" textFill="WHITE" />
+                                                <Label fx:id="a7" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa7" text="20" textFill="WHITE" />
+                                                <Label fx:id="s7" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n7" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i7" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/elf.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_8" mnemonicParsing="false" onAction="#on_slot_8_selected" prefHeight="135.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c8" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h8" text="100" textFill="WHITE" />
+                                                <Label fx:id="a8" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa8" text="20" textFill="WHITE" />
+                                                <Label fx:id="s8" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n8" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i8" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/barbarian.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_3" mnemonicParsing="false" onAction="#on_slot_3_selected" prefHeight="135.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c3" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h3" text="100" textFill="WHITE" />
+                                                <Label fx:id="a3" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa3" text="20" textFill="WHITE" />
+                                                <Label fx:id="s3" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n3" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i3" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/barbarian.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_6" mnemonicParsing="false" onAction="#on_slot_6_selected" prefHeight="135.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c6" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h6" text="100" textFill="WHITE" />
+                                                <Label fx:id="a6" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa6" text="20" textFill="WHITE" />
+                                                <Label fx:id="s6" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n6" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i6" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/barbarian.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_9" mnemonicParsing="false" onAction="#on_slot_9_selected" prefHeight="135.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c9" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h9" text="100" textFill="WHITE" />
+                                                <Label fx:id="a9" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa9" text="20" textFill="WHITE" />
+                                                <Label fx:id="s9" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n9" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i9" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/elf.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="slot_10" mnemonicParsing="false" onAction="#on_slot_10_selected" prefHeight="135.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <graphic>
+                                    <BorderPane maxHeight="228.0" maxWidth="200.0" prefHeight="228.0" prefWidth="184.0">
+                                       <center>
+                                          <VBox prefHeight="100.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="c10" text="Barbarian" textFill="WHITE" />
+                                                <Label fx:id="h10" text="100" textFill="WHITE" />
+                                                <Label fx:id="a10" text="70" textFill="WHITE" />
+                                                <Label fx:id="sa10" text="20" textFill="WHITE" />
+                                                <Label fx:id="s10" text="50" textFill="WHITE" />
+                                             </children>
+                                             <BorderPane.margin>
+                                                <Insets left="10.0" />
+                                             </BorderPane.margin>
+                                          </VBox>
+                                       </center>
+                                       <left>
+                                          <VBox BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label text="Class:" textFill="WHITE" />
+                                                <Label text="Health:" textFill="WHITE" />
+                                                <Label text="Attack:" textFill="WHITE" />
+                                                <Label text="Special:" textFill="WHITE" />
+                                                <Label text="Speed:" textFill="WHITE" />
+                                             </children>
+                                          </VBox>
+                                       </left>
+                                       <top>
+                                          <Label fx:id="n10" alignment="TOP_LEFT" style="-fx-font-size: 18;" text="el-kar-tuk" textFill="WHITE" underline="true" BorderPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </top>
+                                       <right>
+                                          <ImageView fx:id="i10" fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
+                                             <image>
+                                                <Image url="@img/elf.png" />
+                                             </image>
+                                             <BorderPane.margin>
+                                                <Insets right="-5.0" />
+                                             </BorderPane.margin>
+                                          </ImageView>
+                                       </right>
+                                    </BorderPane>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label fx:id="nameText" layoutX="30.0" layoutY="124.0" text="el-kar-tuk" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <VBox layoutX="32.0" layoutY="157.0" prefHeight="200.0" prefWidth="100.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <GridPane hgap="5.0" layoutX="30.0" layoutY="163.0" prefHeight="284.0" prefWidth="203.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="137.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="46.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Health" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Slider fx:id="healthSlider" majorTickUnit="50.0" onMouseDragged="#onHealthChange">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Slider>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Power" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Slider fx:id="powerSlider" onMouseDragged="#onPowerChanged">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Slider>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="Special Attack Power" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Slider fx:id="specialPowerSlider" onMouseDragged="#onSpecialPowerChanged">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Slider>
+                     </children>
+                  </VBox>
+                  <ComboBox fx:id="typeComboBox" onAction="#onTypeChange" prefWidth="150.0" promptText="Barbarian" />
+                  <TextField fx:id="healthInput" onAction="#onHealthEntered" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="powerInput" onAction="#onPowerEntered" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="specialPowerInput" onAction="#onSpecialPowerEntered" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#resetCharacter" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@img/refresh.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" onMouseClicked="#randomizeCharacter" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@img/shuffle.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+                     <children>
+                        <Label text="Speed" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Slider fx:id="speedSlider" onMouseDragged="#onSpeedChanged">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Slider>
+                     </children>
+                  </VBox>
+                  <TextField fx:id="speedInput" onAction="#onSpeedEntered" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>
