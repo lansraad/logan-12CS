@@ -86,7 +86,7 @@ public class Controller {
             case 10 -> image = i10;
             default -> throw new IllegalStateException("Unexpected value: " + slot);
         }
-        image.setImage(new Image("file:src/sample/img/"+ character.getType().toLowerCase() +".png"));
+        image.setImage(new Image("file:src/gui/img/"+ character.getType().toLowerCase() +".png"));
     }
 
     public void displayCharacterEditor(int slot) {
